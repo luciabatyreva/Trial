@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<body>
+<button onclick="typeWriter()" >Hello there, wanderer.</button>
+
+<p id="demo"></p>
+
+<script>
+var i = 0;
+var txt = 'My name is Patriarch, I am a blessed x3 carrier. Currently my pack is going through a rehaul, do check in later with us.';
+var speed = 50;
+
+function typeWriter() {
+  if (i < txt.length) {
+    document.getElementById("demo").innerHTML += txt.charAt(i);
+    i++;
+    setTimeout(typeWriter, speed);
+  }
+}
+</script>
+
+</body>
+</html>
